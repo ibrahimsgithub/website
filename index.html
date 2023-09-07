@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4FZhANhV-CU7MmCtgLyRQrCWyeFEeBQ&callback=initMap">
+    </script>
+    
+    <script>
+
+        function initMap() {
+
+            let map;
+            const population = 510746;
+            const Manchester = { lat: 53.4808, lng: -2.2426 }
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: Manchester,
+                zoom: 10
+            }
+            );
+
+
+            const circle = new google.maps.Circle({
+                strokeColor: "Blue",
+                fillColor: "Blue",
+                strokeOpacity: 0.5,
+                strokeWeight: 2,
+                fillOpacity: 0.3,
+                map:map,
+                center: Manchester,
+                radius: 30000
+            })
+
+            var marker=new google.maps.Marker({
+                position:Manchester,
+                map: map,
+                title: 'Return, 25 Fake Street, Manchester, M25 3AJ',
+                animation: google.maps.Animation.BOUNCE
+            })
+
+        }
+
+    </script>
+
+    <div id="fullnavbar">
+        <div id="home"><a href="index.html">Return</a></div>
+        <div id="navbar">
+            <a href="bouquets.html">Bouquets</a>
+            <a href="plants.html">Plants</a>
+        </div>
+    </div>
+    
+    <div id="image">
+    <img src="florist_shop.jpeg" alt="florist shop">
+    </div>
+
+    <div id="welcome">
+        <h1>Welcome to Return!</h1>
+    </div>
+    
+    <div id="content">
+        <p>Here at Return we take care to make sure we provide you with the finest bouquets, 
+            sourced from sustainable fields and kept fresh from field to your doorstep. 
+            We also stock popular household plants.
+            Pick from our most popular selection of bouquets and plants or visit us in store for our full range. </p>
+    </div>
+
+    <div class='row'>
+        <div class='column'>
+            <div class='blue-column'>
+                <br><br><br><br>"The best flowers in all of Manchester"<br><br>
+                           -Abdul<br><br><br>
+            </div>
+        </div>
+        <div class='column'>
+            <div class='green-column'>
+                <br><br><br><br>"So professional and friendly"<br><br>
+                          -Chris
+            </div>
+        </div>
+        <div class="column">
+            <div class="red-column">
+                <br><br><br><br>"Never let me down. Been buying here for 10 years"<br><br>
+                                    -George
+            </div>
+        </div>
+    </div>
+
+    <div id="cover">Area we cover for delivery</div>
+    <div id="map"></div>
+
+    <footer>
+        <div id="socials">
+            <a href="https://en-gb.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://twitter.com/?lang=en" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://uk.linkedin.com/" target="_blank">linkedin</a>
+        </div>
+    </footer>
+
+    
+</html>
